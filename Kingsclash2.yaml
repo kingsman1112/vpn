@@ -26,18 +26,18 @@ tun:
         - tcp://8.8.8.8:53
         - 8.8.8.8:1053
 proxies:
-  - {"type":"vmess","name":"🇸🇬Changshininc4G","server":"54.179.169.1","port":"443","cipher":"auto","uuid":"d6176a55-aac8-42e7-dfa4-ddaa50a7e62e","alterId":0,"tls":false,"udp":true,"tfo":"true, tls-cert-sha256=你的指纹","skip-cert-verify":true}
-  - {"type":"vmess","name":"🇸🇬 𝐒𝐆 02","server":"13.228.29.252","port":"80","cipher":"auto","uuid":"c71993aa-6290-498a-efda-e3f9aaec3357","alterId":0,"tls":false,"udp":true,"tfo":"true, tls-cert-sha256=你的指纹","skip-cert-verify":true}
-  - {"type":"vmess","name":"🇻🇳HCSAVN HN","server":"103.166.183.226","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":"true, tls-cert-sha256=你的指纹","network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
-  - {"type":"vmess","name":"🇻🇳FBIOSFDK HN","server":"fwb.hcsavn.com","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":"true, tls-cert-sha256=你的指纹","network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬 𝐒𝐆 02","server":"13.228.29.252","port":"80","cipher":"auto","uuid":"c71993aa-6290-498a-efda-e3f9aaec3357","alterId":0,"tls":false,"udp":true,"tfo":true,"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇻🇳HCSAVN HN","server":"103.166.183.226","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇻🇳FBIOSFDK HN","server":"fwb.hcsavn.com","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬FBIOSFDK SG","server":"198.252.101.4","port":"80","cipher":"auto","uuid":"73088147-ff8c-4ba8-9805-d9c6886abf60","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
 proxy-groups:
-    - { name: KINGSMAN, type: select, proxies: [♻️Auto chọn (All), ♻️Auto chọn (🇻🇳VN), ♻️Auto chọn (🇸🇬SG), 🔯Auto chuyển đổi dự phòng (All), 🔯Auto chuyển đổi dự phòng (🇻🇳VN), 🔯Auto chuyển đổi dự phòng (🇸🇬SG), 🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬Changshininc4G, 🇸🇬 𝐒𝐆 02]}
-    - { name: ♻️Auto chọn (All), type: url-test, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬Changshininc4G, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 300}
+    - { name: KINGSMAN, type: select, proxies: [♻️Auto chọn (All), ♻️Auto chọn (🇻🇳VN), ♻️Auto chọn (🇸🇬SG), 🔯Auto chuyển đổi dự phòng (All), 🔯Auto chuyển đổi dự phòng (🇻🇳VN), 🔯Auto chuyển đổi dự phòng (🇸🇬SG), 🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬FBIOSFDK SG, 🇸🇬 𝐒𝐆 02]}
+    - { name: ♻️Auto chọn (All), type: url-test, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬FBIOSFDK SG, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 300}
     - { name: ♻️Auto chọn (🇻🇳VN), type: url-test, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN], url: 'http://www.gstatic.com/generate_204', interval: 300}
-    - { name: ♻️Auto chọn (🇸🇬SG), type: url-test, proxies: [🇸🇬Changshininc4G, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 300}
-    - { name: 🔯Auto chuyển đổi dự phòng (All), type: fallback, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬Changshininc4G, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 450}
+    - { name: ♻️Auto chọn (🇸🇬SG), type: url-test, proxies: [🇸🇬FBIOSFDK SG, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 300}
+    - { name: 🔯Auto chuyển đổi dự phòng (All), type: fallback, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN, 🇸🇬FBIOSFDK SG, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 450}
     - { name: 🔯Auto chuyển đổi dự phòng (🇻🇳VN), type: fallback, proxies: [🇻🇳HCSAVN HN, 🇻🇳FBIOSFDK HN], url: 'http://www.gstatic.com/generate_204', interval: 450}
-    - { name: 🔯Auto chuyển đổi dự phòng (🇸🇬SG), type: fallback, proxies: [🇸🇬Changshininc4G, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 450}
+    - { name: 🔯Auto chuyển đổi dự phòng (🇸🇬SG), type: fallback, proxies: [🇸🇬FBIOSFDK SG, 🇸🇬 𝐒𝐆 02], url: 'http://www.gstatic.com/generate_204', interval: 450}
 rule-providers:
     Streaming: { type: http, behavior: classical, path: ./RuleSet/StreamingMedia/Streaming.yaml, url: 'https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml', interval: 86400}
     Global: { type: http, behavior: classical, path: ./RuleSet/Global.yaml, url: 'https://cdn.jsdelivr.net/gh/DivineEngine/Profiles@master/Clash/RuleSet/Global.yaml', interval: 86400}
