@@ -26,7 +26,7 @@ tun:
         - tcp://8.8.8.8:53
         - 8.8.8.8:1053
 proxies:
-  - {"type":"vmess","name":"🇸🇬 𝐒𝐆 02","server":"13.228.29.252","port":"80","cipher":"auto","uuid":"c71993aa-6290-498a-efda-e3f9aaec3357","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
+  - {"type":"vmess","name":"🇸🇬 𝐒𝐆 02","server":"13.228.29.252","port":"80","cipher":"auto","uuid":"c71993aa-6290-498a-efda-e3f9aaec3357","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"http","http-path":"/","http-headers":{"Host":"viettel.akamaized.net"},"skip-cert-verify":true}
   - {"type":"vmess","name":"🇻🇳HCSAVN HN","server":"103.166.183.226","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
   - {"type":"vmess","name":"🇻🇳FBIOSFDK HN","server":"fwb.hcsavn.com","port":"80","cipher":"auto","uuid":"c3198362-a719-479f-f6e3-51c31dc5558f","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
   - {"type":"vmess","name":"🇸🇬FBIOSFDK SG","server":"198.252.101.4","port":"80","cipher":"auto","uuid":"73088147-ff8c-4ba8-9805-d9c6886abf60","alterId":0,"tls":false,"udp":true,"tfo":true,"network":"ws","ws-opts":{"path":"/","headers":{"Host":"viettel.akamaized.net"}},"skip-cert-verify":true}
